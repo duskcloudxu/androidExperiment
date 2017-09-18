@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="test">我的第一个安卓程序</string>
+</resources>
