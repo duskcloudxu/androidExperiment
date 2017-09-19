@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="test">我的第一个安卓程序</string>
+    <string name="experiment_2_1">LayoutTest</string>
 </resources>
