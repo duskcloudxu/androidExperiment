@@ -23,7 +23,6 @@
             android:fontFamily="casual"
             android:gravity="center"
             android:text="@string/experiment_2_1"
-            android:textColor=""
             android:textSize="24dp" />
     </LinearLayout>
 
