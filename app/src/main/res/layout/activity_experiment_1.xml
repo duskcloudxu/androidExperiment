@@ -82,6 +82,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="date"
             android:hint="请输入生日" />
     </LinearLayout>
     <LinearLayout
