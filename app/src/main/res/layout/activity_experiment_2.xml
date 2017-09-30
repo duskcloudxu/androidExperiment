@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="30dp"
     android:background="@mipmap/a"
-    android:id="@+id/layOut"
+    android:id="@+id/E2_layOut"
     tools:context="com.example.admin.myapplication.experiment_2">
 
     <LinearLayout
@@ -27,7 +27,6 @@
 
             android:layout_weight="11" />
     </LinearLayout>
-    //userName
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,7 +60,7 @@
             android:text="身高(cm):" />
 
         <EditText
-            android:id="@+id/height"
+            android:id="@+id/E2_height"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:inputType="number"
@@ -84,7 +83,7 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:id="@+id/weight"
+            android:id="@+id/E2_weight"
             android:inputType="number"
             android:layout_weight="11" />
     </LinearLayout>
@@ -95,7 +94,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/cipher"
+            android:id="@+id/E2_cipher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -107,7 +106,7 @@
             android:layout_weight="1"></LinearLayout>
 
         <Button
-            android:id="@+id/reset"
+            android:id="@+id/E2_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -119,7 +118,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/test"
+            android:id="@+id/E2_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="测试按钮" />

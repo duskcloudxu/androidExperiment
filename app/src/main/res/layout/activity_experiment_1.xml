@@ -17,7 +17,7 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/E1_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="casual"

@@ -2,4 +2,30 @@
     <string name="app_name">My Application</string>
     <string name="test">我的第一个安卓程序</string>
     <string name="experiment_2_1">LayoutTest</string>
+    <string-array name="E2_provinceList">
+        <item>浙江</item>
+        <item>江苏</item>
+    </string-array>
+    <string-array name="E2_cityInZ">
+        <item>杭州</item>
+    </string-array>
+    <string-array name="E2_cityInJ">
+        <item>南京</item>
+    </string-array>
+    <string-array name="E2_hangZhou">
+        <item>滨江区</item>
+        <item>西湖区</item>
+        <item>拱墅区</item>
+        <item>上城区</item>
+        <item>下城区</item>
+        <item>余杭区</item>
+    </string-array>
+    <string-array name="E2_nanJing">
+        <item>玄武区</item>
+        <item>秦淮区</item>
+        <item>建邺区</item>
+        <item>浦口区</item>
+        <item>江宁区</item>
+        <item>雨花台区</item>
+    </string-array>
 </resources>

@@ -21,12 +21,12 @@ public class experiment_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experiment_2);
-        height = (EditText) findViewById(R.id.height);
-        weight = (EditText) findViewById(R.id.weight);
-        backGround = (LinearLayout) findViewById(R.id.layOut);
-        Button cipher = (Button) findViewById(R.id.cipher);
-        Button reset = (Button) findViewById(R.id.reset);
-        Button change = (Button) findViewById(R.id.test);
+        height = (EditText) findViewById(R.id.E2_height);
+        weight = (EditText) findViewById(R.id.E2_weight);
+        backGround = (LinearLayout) findViewById(R.id.E2_layOut);
+        Button cipher = (Button) findViewById(R.id.E2_cipher);
+        Button reset = (Button) findViewById(R.id.E2_reset);
+        Button change = (Button) findViewById(R.id.E2_test);
         cipher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,7 @@ public class experiment_2 extends AppCompatActivity {
         });
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View V) {
+            public void onClick(View V) {//TODO:增加剩下的用户和密码的重置
                 height.setText("");
                 height.clearFocus();
                 weight.setText("");
