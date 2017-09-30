@@ -14,6 +14,8 @@ import android.widget.Toast;
 public class experiment_2 extends AppCompatActivity {
     private EditText height;
     private EditText weight;
+    private EditText user;
+    private EditText password;
     LinearLayout backGround;
     boolean backGroundCounter = false;
 
@@ -21,6 +23,8 @@ public class experiment_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experiment_2);
+        user = (EditText) findViewById(R.id.E2_user);
+        password=(EditText)findViewById(R.id.E2_password);
         height = (EditText) findViewById(R.id.E2_height);
         weight = (EditText) findViewById(R.id.E2_weight);
         backGround = (LinearLayout) findViewById(R.id.E2_layOut);
@@ -55,11 +59,15 @@ public class experiment_2 extends AppCompatActivity {
         });
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View V) {//TODO:增加剩下的用户和密码的重置
+            public void onClick(View V) {
                 height.setText("");
                 height.clearFocus();
                 weight.setText("");
                 weight.clearFocus();
+                password.setText("");
+                password.clearFocus();
+                user.setText("");
+
             }
         });
         change.setOnClickListener(new View.OnClickListener() {
