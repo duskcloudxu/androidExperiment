@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class experiment_2_2 extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +60,52 @@ public class experiment_2_2 extends AppCompatActivity {
 
             }
         });
+
+        RadioButton male = (RadioButton) findViewById(R.id.E2_male);
+        RadioButton female = (RadioButton) findViewById(R.id.E2_female);
+        RadioButton.OnClickListener myRadioListener = new RadioButton.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.E2_male:
+                        Toast.makeText(experiment_2_2.this, "男", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.E2_female:
+                        Toast.makeText(experiment_2_2.this, "女", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        };
+        male.setOnClickListener(myRadioListener);
+        female.setOnClickListener(myRadioListener);
+
+        CheckBox math = (CheckBox) findViewById(R.id.E2_math);
+        CheckBox chinese = (CheckBox) findViewById(R.id.E2_chinese);
+        CheckBox english = (CheckBox) findViewById(R.id.E2_english);
+        CompoundButton.OnCheckedChangeListener myListener = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton v, boolean isChecked) {
+                if (isChecked) {
+                    switch (v.getId()) {
+                        case R.id.E2_chinese:
+                            Toast.makeText(experiment_2_2.this, "chinese", Toast.LENGTH_SHORT).show();
+                            break;
+                        case R.id.E2_math:
+                            Toast.makeText(experiment_2_2.this, "math", Toast.LENGTH_SHORT).show();
+                            break;
+                        case R.id.E2_english:
+                            Toast.makeText(experiment_2_2.this, "english", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+            }
+        };
+
+        math.setOnCheckedChangeListener(myListener);
+        chinese.setOnCheckedChangeListener(myListener);
+        english.setOnCheckedChangeListener(myListener);
+
+
     }
 
 }
