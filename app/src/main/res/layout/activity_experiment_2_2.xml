@@ -15,79 +15,113 @@
         tools:layout_editor_absoluteY="0dp">
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/E2_provinceSpin"
-            />
-
-        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/E2_citySpin"/>
+            android:layout_margin="10dp" />
 
         <Spinner
+            android:id="@+id/E2_citySpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/E2_subdivideSpin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:id="@+id/E2_subdivideSpin"/>
+            android:layout_margin="10dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="check"/>
+            android:text="check" />
+
         <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
+
         <ToggleButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/E2_male"
-                android:text="男"/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="男" />
+
+            <RadioButton
                 android:id="@+id/E2_female"
-                android:text="女"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女" />
         </RadioGroup>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/E2_math"
-            android:text="Mathmatic"/>
-        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Mathmatic" />
+
+        <CheckBox
             android:id="@+id/E2_chinese"
-            android:text="Chinese"/>
-        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Chinese" />
+
+        <CheckBox
             android:id="@+id/E2_english"
-            android:text="English"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English" />
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/E2_image"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/e2_2_dark"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ToggleButton
+            android:id="@+id/E2_toggleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="开启"
+            android:textOn="关闭"/>
     </LinearLayout>
 </LinearLayout>

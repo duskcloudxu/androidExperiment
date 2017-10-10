@@ -7,9 +7,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class experiment_2_2 extends AppCompatActivity {
     @Override
@@ -104,6 +106,20 @@ public class experiment_2_2 extends AppCompatActivity {
         math.setOnCheckedChangeListener(myListener);
         chinese.setOnCheckedChangeListener(myListener);
         english.setOnCheckedChangeListener(myListener);
+
+        ToggleButton lightTog = (ToggleButton) findViewById(R.id.E2_toggleBtn);
+        lightTog.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        ImageView light=(ImageView)findViewById(R.id.E2_image);
+                        if (isChecked)
+                            light.setImageResource(R.mipmap.e2_2_light);
+                        else
+                            light.setImageResource(R.mipmap.e2_2_dark);
+                    }
+                }
+        );
 
 
     }
