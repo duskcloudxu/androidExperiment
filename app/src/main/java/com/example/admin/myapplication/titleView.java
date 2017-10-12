@@ -18,6 +18,7 @@ public class titleView extends LinearLayout {
     public titleView(Context context, AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.sample_title_view,this);
+
     }
 
 
