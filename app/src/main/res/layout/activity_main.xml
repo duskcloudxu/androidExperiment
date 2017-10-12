@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.admin.myapplication.MainActivity">
-
+<com.example.admin.myapplication.titleView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</com.example.admin.myapplication.titleView>
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"

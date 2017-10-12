@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_left"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:text="Back"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/title_text"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Title"
+        android:textSize="20sp" />
+</LinearLayout>
