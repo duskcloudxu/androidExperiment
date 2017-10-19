@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorRed">
+    android:background="@color/colorbBlack">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -32,7 +32,7 @@
         android:text="title"
         android:textColor="#FFFFFF"
         android:textSize="30dp" />
-    <!--支撑框架的空元素-->
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
