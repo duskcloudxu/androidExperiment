@@ -18,4 +18,5 @@ public class messageRight extends LinearLayout {
     }
 
 
+
 }
