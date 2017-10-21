@@ -50,10 +50,27 @@ public class experiment_3 extends AppCompatActivity {
                             }
                         })
                         .show();
-
-
             }
         });
+        cplAlt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dlg=new AlertDialog.Builder(experiment_3.this);
+                final String[] data={"Math","English","Physic"};
+                dlg.setMultiChoiceItems(data, null, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        if(isChecked)
+                        {
+                            Toast.makeText(experiment_3.this,data[which] , Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                })
+                .show();
+            }
+        });
+
 
 
     }

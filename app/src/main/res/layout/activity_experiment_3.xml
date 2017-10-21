@@ -3,17 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.admin.myapplication.experiment_3">
-<ListView
-    android:id="@+id/E3_listView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"></ListView>
+
+    <ListView
+        android:id="@+id/E3_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
     <Button
         android:id="@+id/E3_simpleAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/E3_complicatedAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/E3_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TimePicker>
+
+  
 </LinearLayout>
