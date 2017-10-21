@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageRight_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_shape"
+    android:maxWidth="150dp"
+    android:text="test message"
+    android:drawableRight="@drawable/message_shape_triangle"
+    />

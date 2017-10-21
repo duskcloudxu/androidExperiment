@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //详见向下转型
         Button experi_2=(Button)findViewById(R.id.experi_2);
         Button experi_2_2=(Button)findViewById(R.id.experi_2_2);
+        Button experi_3=(Button)findViewById(R.id.experi_3);
 
         experi_1.setOnClickListener(new View.OnClickListener() {  // 这个是写在setOnClickListener底下的类
             @Override
@@ -62,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent experiment_2_2=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_2_2.class);
                 startActivity(experiment_2_2);
+            }
+
+        });
+        experi_3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent experiment_3=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_3.class);
+                startActivity(experiment_3);
             }
 
         });
