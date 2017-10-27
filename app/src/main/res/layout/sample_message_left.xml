@@ -1,15 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="right"
+    android:gravity="left"
     android:orientation="horizontal">
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/messageRight_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bubble_right"
+        android:background="@drawable/bubble_left_dot9"
         android:fontFamily="cursive"
-        android:textSize="20dp"
-        android:text=""
+        android:textSize="25dp"
+        android:text="twetwefwefwfefewfwfeefwefwefwefefewfwfwfwfwefefefwefwefwfwefefwfwfwfee"
         android:maxWidth="150dp" />
 </LinearLayout>

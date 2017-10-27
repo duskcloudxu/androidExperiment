@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -12,9 +13,11 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class experiment_3 extends AppCompatActivity {
@@ -25,6 +28,7 @@ public class experiment_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experiment_3);
         ListView listView = (ListView) findViewById(R.id.E3_listView);
+
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.sample_message_right, data);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -70,7 +74,28 @@ public class experiment_3 extends AppCompatActivity {
                 .show();
             }
         });
-
+        TimePicker timePicker=(TimePicker)findViewById(R.id.E3_timePicker);
+        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                Toast.makeText(experiment_3.this, "现在为"+hourOfDay+":"+minute, Toast.LENGTH_SHORT).show();
+            }
+        });
+        Button timelog=(Button)findViewById(R.id.E3_timeLog);
+        timelog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cld=Calendar.getInstance();
+                Toast.makeText(experiment_3.this, "test", Toast.LENGTH_SHORT).show();
+                TimePickerDialog tpd=new TimePickerDialog(experiment_3.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        Toast.makeText(experiment_3.this, "You selected:"+hourOfDay+":"+minute, Toast.LENGTH_SHORT).show();
+                    }
+                },cld.get(Calendar.HOUR_OF_DAY),cld.get(Calendar.MINUTE),false);
+                tpd.show();
+            }
+        });
 
 
     }
