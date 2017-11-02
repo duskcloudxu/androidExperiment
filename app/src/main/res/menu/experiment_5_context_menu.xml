@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/E5_red"
+        android:title="赤い" />
+    <item
+        android:id="@+id/E5_blue"
+        android:title="青い" />
+    <item
+        android:id="@+id/E5_green"
+        android:title="緑" />
+</menu>

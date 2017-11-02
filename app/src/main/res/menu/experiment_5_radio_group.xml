@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <group android:checkableBehavior="all">
+       <item
+           android:title="Traffic"
+           android:id="@+id/E5_Traffic"/>
+       <item
+           android:title="Map"
+           android:id="@+id/E5_Map"/>
+       <item
+           android:title="satalite"
+           android:id="@+id/E5_satalite"/>
+   </group>
+</menu>
