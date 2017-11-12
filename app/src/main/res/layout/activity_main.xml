@@ -59,6 +59,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="experiment_4_2_1" />
+    <Button
+        android:id="@+id/experi_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="experiment_5" />
 
     <Button
         android:id="@+id/weChat_simulate"

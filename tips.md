@@ -1,0 +1,1 @@
+#取消默认actionBar的话直接在style的app theme下把parent改成Theme.AppCompat.Light.NoActionBar即可
