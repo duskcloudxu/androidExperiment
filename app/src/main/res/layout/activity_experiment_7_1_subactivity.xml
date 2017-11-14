@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.myapplication.experiment_7_1">
+    tools:context="com.example.admin.myapplication.experiment_7_1_subactivity">
+
     <android.support.v7.widget.Toolbar
-        android:id="@+id/E7_1_toolBar"
+        android:id="@+id/E7_1_sub_toolBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:theme="@style/OverflowMenu"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@android:style/Widget.Material.PopupMenu.Overflow"></android.support.v7.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

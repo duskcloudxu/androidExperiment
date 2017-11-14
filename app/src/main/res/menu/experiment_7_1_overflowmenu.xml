@@ -3,10 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/E7_1_button"
+        android:icon="@android:drawable/button_onoff_indicator_off"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/E7_1_search"
         android:icon="@android:drawable/ic_menu_search"
         android:title="Item"
-        app:showAsAction="never|always" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/E7_1_item2"
         android:icon="@mipmap/ic_launcher"
