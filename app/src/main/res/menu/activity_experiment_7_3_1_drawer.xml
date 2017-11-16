@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_android_black_24dp"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_select"
+            android:icon="@drawable/ic_add_circle_red_600_24dp"
+
+            android:title="选择" />
+    </group>
+
+    <item android:title="通讯">
+        <menu>
+            <item
+                android:id="@+id/E7_3_share"
+                android:icon="@drawable/ic_add_circle_red_600_24dp"
+
+                android:title="共享" />
+            <item
+                android:id="@+id/E7_3_send"
+                android:icon="@drawable/ic_add_circle_red_600_24dp"
+
+                android:title="发送" />
+        </menu>
+    </item>
+
+</menu>
