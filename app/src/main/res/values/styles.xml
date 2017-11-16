@@ -14,7 +14,7 @@
         <item name="android:textColor">#000000</item>
         <item name="overlapAnchor">false</item>
     </style>
-
+<style name="myDropdown" parent="Base.Widget.AppCompat.DropDownItem.Spinner"></style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
