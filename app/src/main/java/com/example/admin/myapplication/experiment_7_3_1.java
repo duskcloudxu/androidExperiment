@@ -51,8 +51,6 @@ public class experiment_7_3_1 extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         Toast.makeText(this, "you selected "+item.getTitle(), Toast.LENGTH_SHORT).show();
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
