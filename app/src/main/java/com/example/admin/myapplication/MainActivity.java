@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActionBar actionBar=getSupportActionBar();
-        if(actionBar!=null)actionBar.hide();//隐藏默认顶栏
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) actionBar.hide();//隐藏默认顶栏
         Button experi_1 = (Button) findViewById(R.id.experi_1);//findViewById返回的是view对象，
         // 即在layout里出现过的对象,需要把它转型成为button对象
         //详见向下转型
-       
+
 
         experi_1.setOnClickListener(new View.OnClickListener() {  // 这个是写在setOnClickListener底下的类
             @Override
@@ -48,68 +48,105 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(experiment_1);
             }
         });                     //此为view提供的方法
-        Button experi_2=(Button)findViewById(R.id.experi_2);
+        Button experi_2 = (Button) findViewById(R.id.experi_2);
 
-        experi_2.setOnClickListener(new View.OnClickListener(){
+        experi_2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_2=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_2.class);
+            public void onClick(View v) {
+                Intent experiment_2 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_2.class);
                 startActivity(experiment_2);
             }
 
         });
-        Button experi_2_2=(Button)findViewById(R.id.experi_2_2);
+        Button experi_2_2 = (Button) findViewById(R.id.experi_2_2);
 
-        experi_2_2.setOnClickListener(new View.OnClickListener(){
+        experi_2_2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_2_2=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_2_2.class);
+            public void onClick(View v) {
+                Intent experiment_2_2 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_2_2.class);
                 startActivity(experiment_2_2);
             }
 
         });
-        Button experi_3=(Button)findViewById(R.id.experi_3);
+        Button experi_3 = (Button) findViewById(R.id.experi_3);
 
-        experi_3.setOnClickListener(new View.OnClickListener(){
+        experi_3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_3=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_3.class);
+            public void onClick(View v) {
+                Intent experiment_3 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_3.class);
                 startActivity(experiment_3);
             }
 
         });
-        Button experi_4_1=(Button)findViewById(R.id.experi_4_1);
-        experi_4_1.setOnClickListener(new View.OnClickListener(){
+        Button experi_4_1 = (Button) findViewById(R.id.experi_4_1);
+        experi_4_1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_4_1=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_4_1.class);
+            public void onClick(View v) {
+                Intent experiment_4_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_4_1.class);
                 startActivity(experiment_4_1);
             }
 
         });
-        Button experi_4_2_1=(Button)findViewById(R.id.experi_4_2_1);
-        experi_4_2_1.setOnClickListener(new View.OnClickListener(){
+        Button experi_4_2_1 = (Button) findViewById(R.id.experi_4_2_1);
+        experi_4_2_1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_4_2_1=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_4_2_1.class);
+            public void onClick(View v) {
+                Intent experiment_4_2_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_4_2_1.class);
                 startActivity(experiment_4_2_1);
             }
 
         });
-        Button experi_5=(Button)findViewById(R.id.experi_5);
-        experi_5.setOnClickListener(new View.OnClickListener(){
+        Button experi_5 = (Button) findViewById(R.id.experi_5);
+        experi_5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent experiment_5=new Intent(MainActivity.this, com.example.admin.myapplication.experiment_5.class);
+            public void onClick(View v) {
+                Intent experiment_5 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_5.class);
                 startActivity(experiment_5);
             }
 
         });
-        Button weChatSimulater=(Button)findViewById(R.id.weChat_simulate);
+        Button experi_7_1 = (Button) findViewById(R.id.experi_7_1);
+        experi_7_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_7_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_7_1.class);
+                startActivity(experiment_7_1);
+            }
+
+        });
+        Button experi_7_2 = (Button) findViewById(R.id.experi_7_2);
+        experi_7_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_7_2 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_7_2.class);
+                startActivity(experiment_7_2);
+            }
+
+        });
+        Button experi_7_3_1 = (Button) findViewById(R.id.experi_7_3_1);
+        experi_7_3_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_7_3_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_7_3_1.class);
+                startActivity(experiment_7_3_1);
+            }
+
+        });
+
+        Button experi_7_3_2 = (Button) findViewById(R.id.experi_7_3_2);
+        experi_7_3_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_7_3_2 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_7_3_2.class);
+                startActivity(experiment_7_3_2);
+            }
+
+        });
+        Button weChatSimulater = (Button) findViewById(R.id.weChat_simulate);
         weChatSimulater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent WeChatSimulation=new Intent(MainActivity.this, com.example.admin.myapplication.WeChatSimulation.class);
+                Intent WeChatSimulation = new Intent(MainActivity.this, com.example.admin.myapplication.WeChatSimulation.class);
                 startActivity(WeChatSimulation);
             }
         });

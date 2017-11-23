@@ -15,37 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".experiment_7_3_2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".experiment_7_3_1"
-            android:label="@string/title_activity_experiment_7_3_1"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".experiment_7_2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".experiment_7_1">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,49 +23,37 @@
             </intent-filter>
         </activity>
         <activity android:name=".experiment_1">
-            <intent-filter>
-                <action android:name="android.intent.action.CALL" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity android:name=".experiment_2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".experiment_2_2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".experiment_3" />
         <activity android:name=".WeChatSimulation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".experiment_4_1" />
         <activity android:name=".experiment_4_2_1" />
         <activity android:name=".experiment_4_2_2" />
         <activity android:name=".experiment_4_2_3" />
         <activity android:name=".experiment_5">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".experiment_7_1_subactivity"
             android:label="experiment_7_1_search"
             android:parentActivityName=".experiment_7_1" />
+        <activity android:name=".experiment_7_3_2">
+        </activity>
+        <activity
+            android:name=".experiment_7_3_1"
+            android:label="@string/title_activity_experiment_7_3_1"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".experiment_7_2">
+        </activity>
+        <activity android:name=".experiment_7_1">
+        </activity>
 
     </application>
 

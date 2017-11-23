@@ -8,69 +8,112 @@
 
     <com.example.admin.myapplication.titleView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.example.admin.myapplication.titleView>
+        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/test"
-        android:textColor="@android:color/holo_red_light" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/experi_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_1" />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/experi_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_2" />
 
-    <Button
-        android:id="@+id/experi_2_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_2-2" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/test"
+                android:textColor="@android:color/holo_red_light" />
 
-    <Button
-        android:id="@+id/experi_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_3" />
+            <Button
+                android:id="@+id/experi_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_1" />
 
-    <Button
-        android:id="@+id/experi_4_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_4_1" />
+            <Button
+                android:id="@+id/experi_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_2" />
 
-    <Button
-        android:id="@+id/experi_4_2_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_4_2_1" />
-    <Button
-        android:id="@+id/experi_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="experiment_5" />
+            <Button
+                android:id="@+id/experi_2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_2-2" />
 
-    <Button
-        android:id="@+id/weChat_simulate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="weChat_simulate" />
+            <Button
+                android:id="@+id/experi_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_3" />
 
+            <Button
+                android:id="@+id/experi_4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_4_1" />
+
+            <Button
+                android:id="@+id/experi_4_2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_4_2_1" />
+
+            <Button
+                android:id="@+id/experi_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_5" />
+
+            <Button
+                android:id="@+id/experi_7_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_7_1" />
+
+            <Button
+                android:id="@+id/experi_7_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_7_2" />
+
+            <Button
+                android:id="@+id/experi_7_3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_7_3_1" />
+
+            <Button
+                android:id="@+id/experi_7_3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_7_3_2" />
+
+            <Button
+                android:id="@+id/weChat_simulate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="weChat_simulate" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
