@@ -136,11 +136,77 @@ public class experiment_8_1 extends AppCompatActivity {
             }
         });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         btn4 = (Button) findViewById(R.id.E8_1_download);
         txtView1 = (TextView) findViewById(R.id.E8_1_textVIew);
         progressBar = (ProgressBar) findViewById(R.id.E8_1_progressBar);
         progressBar.setVisibility(View.INVISIBLE);
     }
 
+    protected void btn1_Click(View view) {
+        //  txtView1.setText(  j +"");
+        //   j++;
+        downLoadPictue();
+
+    }
+
+
+    void downLoadPictue() {
+        DownImageTask asyncTask = new DownImageTask();
+        asyncTask.execute("http://www.xitongzijia.net/meinv/e/data/tmp/titlepic/pic43847d162a1452bfeb482be70d24bff9e5c99_200.jpg");
+    }
+
+    class DownImageTask extends AsyncTask<String, Integer, Bitmap> {
+        // 执行预处理
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // 显示进度条
+            progressBar.setVisibility(View.VISIBLE);
+            progressBar.setMax(100);
+
+        }
+
+        // 后台进程的执行
+        @Override
+        protected Bitmap doInBackground(String... params) {
+
+            Bitmap bitmap = null;
+            try {
+                URL url = new URL(params[0]);
+                HttpURLConnection conn = (HttpURLConnection) url
+                        .openConnection();
+                // 进度条的更新，我这边只是用一个循环来示范，在实际应用中要使用已下载文件的大小和文件总大小的比例来更新
+                for (int i = 1; i <= 10; i++) {
+                    publishProgress(i * 10);
+                    Thread.sleep(200);
+                }
+                InputStream inputStream = conn.getInputStream();
+                bitmap = BitmapFactory.decodeStream(inputStream);
+                inputStream.close();
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                msg = e.getMessage();
+            }
+            return bitmap;
+        }
+
+        // 运行于UI线程，对后台任务的结果做出处理，doInBackground方法执行的结果作为此方法的参数
+        @Override
+        protected void onPostExecute(Bitmap result) {
+            super.onPostExecute(result);
+            progressBar.setVisibility(View.GONE);
+
+        }
+
+        // 运行于UI线程，如果在doInBackground(Params...)中使用了publishProgress(Progress...)，就会触发此方法
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            txtView1.setText("" + values[0] + "%" + msg);
+            progressBar.setProgress(values[0]);
+
+        }
+    }
 }
