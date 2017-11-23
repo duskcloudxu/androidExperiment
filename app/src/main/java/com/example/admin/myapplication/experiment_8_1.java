@@ -16,7 +16,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -25,7 +28,6 @@ public class experiment_8_1 extends AppCompatActivity {
     private Button btn4;
     private TextView txtView1;
     private ProgressBar progressBar;
-    private String msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,27 +137,19 @@ public class experiment_8_1 extends AppCompatActivity {
                 pro3.interrupt();
             }
         });
-        super.onCreate(savedInstanceState);
         btn4 = (Button) findViewById(R.id.E8_1_download);
         txtView1 = (TextView) findViewById(R.id.E8_1_textVIew);
         progressBar = (ProgressBar) findViewById(R.id.E8_1_progressBar);
         progressBar.setVisibility(View.INVISIBLE);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downLoadPictue();
+            }
+        });
     }
 
-    protected void btn1_Click(View view) {
-        //  txtView1.setText(  j +"");
-        //   j++;
-        downLoadPictue();
-
-    }
-
-
-    void downLoadPictue() {
-        DownImageTask asyncTask = new DownImageTask();
-        asyncTask.execute("http://www.xitongzijia.net/meinv/e/data/tmp/titlepic/pic43847d162a1452bfeb482be70d24bff9e5c99_200.jpg");
-    }
-
-    class DownImageTask extends AsyncTask<String, Integer, Bitmap> {
+    private class DownImageTask extends AsyncTask<String, Integer, Bitmap> {
         // 执行预处理
         @Override
         protected void onPreExecute() {
@@ -169,25 +163,30 @@ public class experiment_8_1 extends AppCompatActivity {
         // 后台进程的执行
         @Override
         protected Bitmap doInBackground(String... params) {
-
             Bitmap bitmap = null;
             try {
                 URL url = new URL(params[0]);
-                HttpURLConnection conn = (HttpURLConnection) url
-                        .openConnection();
-                // 进度条的更新，我这边只是用一个循环来示范，在实际应用中要使用已下载文件的大小和文件总大小的比例来更新
-                for (int i = 1; i <= 10; i++) {
-                    publishProgress(i * 10);
-                    Thread.sleep(200);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();//异步操作
+                int total = 0;
+                int count = 0;
+                int length = conn.getContentLength();
+                byte data[] = new byte[length];
+                InputStream inputStream = conn.getInputStream();//获得当前得到的数据长度
+                ByteArrayOutputStream output=new ByteArrayOutputStream();//申请一个可以用来存储byte数组的输出流
+                while ((count = inputStream.read(data)) != -1) {//当文件还没输出完的时候继续运行,每一次循环，data数组从输入
+                                                                // 流中得到count个字节,存在0-count－1中
+                    total += count;//记录总数
+                    if (length > 0) // only if total length is known
+                        publishProgress((int) (total * 100 / length));
+                    output.write(data,0,count);                  //
+
                 }
-                InputStream inputStream = conn.getInputStream();
-                bitmap = BitmapFactory.decodeStream(inputStream);
+                byte buffer[] =output.toByteArray();
+                bitmap = BitmapFactory.decodeByteArray(buffer,0,length);//每一次缓存把数据从data里面读取出来，即0－count-1之间的数据
                 inputStream.close();
-
-
+                output.close();
             } catch (Exception e) {
                 e.printStackTrace();
-                msg = e.getMessage();
             }
             return bitmap;
         }
@@ -196,6 +195,9 @@ public class experiment_8_1 extends AppCompatActivity {
         @Override
         protected void onPostExecute(Bitmap result) {
             super.onPostExecute(result);
+            ImageView imageView = (ImageView) findViewById(R.id.E8_1_imageView);
+            imageView.setVisibility(View.VISIBLE);
+            imageView.setImageBitmap(result);
             progressBar.setVisibility(View.GONE);
 
         }
@@ -204,9 +206,15 @@ public class experiment_8_1 extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
-            txtView1.setText("" + values[0] + "%" + msg);
+            txtView1.setText("" + values[0] + "%");
             progressBar.setProgress(values[0]);
 
         }
+
+    }
+
+    void downLoadPictue() {
+        DownImageTask asyncTask = new DownImageTask();
+        asyncTask.execute("http://cyf-img.bdstatic.com/img_59421a5eaf896_09b00b5634b0cd481d8c65360190fd22.jpg");
     }
 }

@@ -143,4 +143,17 @@
         app:layout_constraintLeft_toRightOf="@+id/E8_1_progressBtn1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/E8_1_progressBar" />
+
+    <ImageView
+        android:id="@+id/E8_1_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/E8_1_download"
+        app:srcCompat="@color/transparent" />
 </android.support.constraint.ConstraintLayout>
