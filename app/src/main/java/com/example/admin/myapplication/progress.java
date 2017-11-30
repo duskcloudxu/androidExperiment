@@ -31,7 +31,7 @@ public class progress extends Thread {
                 if(this.interrupted())throw new InterruptedException();
             }
         } catch (InterruptedException except) {
-
+return;
         }
     }
 

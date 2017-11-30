@@ -140,7 +140,7 @@ public class experiment_8_1 extends AppCompatActivity {
         btn4 = (Button) findViewById(R.id.E8_1_download);
         txtView1 = (TextView) findViewById(R.id.E8_1_textVIew);
         progressBar = (ProgressBar) findViewById(R.id.E8_1_progressBar);
-        progressBar.setVisibility(View.INVISIBLE);
+//        progressBar.setVisibility(View.INVISIBLE);
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
