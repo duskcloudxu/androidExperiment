@@ -105,6 +105,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Button experi_6 = (Button) findViewById(R.id.experi_6);
+        experi_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_6 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_6.class);
+                startActivity(experiment_6);
+            }
+
+        });
         Button experi_7_1 = (Button) findViewById(R.id.experi_7_1);
         experi_7_1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -78,6 +78,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="experiment_5" />
+            <Button
+                android:id="@+id/experi_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_6" />
 
             <Button
                 android:id="@+id/experi_7_1"
