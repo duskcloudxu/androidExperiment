@@ -12,12 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".experiment_1" />
         <activity android:name=".experiment_2" />
@@ -41,9 +37,8 @@
         <activity android:name=".experiment_7_2" />
         <activity android:name=".experiment_7_1" />
         <activity android:name=".experiment_8_1" />
-        <activity android:name=".experiment_6">
-
-        </activity>
+        <activity android:name=".experiment_10" />
+        <activity android:name=".experiment_6"></activity>
 
         <service
             android:name=".updateService"
@@ -52,7 +47,14 @@
         <service
             android:name=".musicService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".networkAccessing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

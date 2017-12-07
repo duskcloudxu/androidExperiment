@@ -160,6 +160,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Button experi_10 = (Button) findViewById(R.id.experi_10);
+        experi_10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_10 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_10.class);
+                startActivity(experiment_10);
+            }
+
+        });
         Button weChatSimulater = (Button) findViewById(R.id.weChat_simulate);
         weChatSimulater.setOnClickListener(new View.OnClickListener() {
             @Override
