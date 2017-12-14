@@ -1,11 +1,16 @@
 package com.example.admin.myapplication;
 
 import android.annotation.TargetApi;
-import android.icu.util.TimeUnit;
+
+import java.util.concurrent.TimeUnit;
+
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -36,8 +41,10 @@ public class networkAccessing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network_accessing);
         downloadAsynctask downloadAsynctask = new downloadAsynctask();
-        downloadAsynctask.execute("http://wthrcdn.etouch.cn/weather_mini?city=阿卡林");
+        downloadAsynctask.execute("http://wthrcdn.etouch.cn/weather_mini?city=杭州");
         Button login = (Button) findViewById(R.id.networkAccessing_login);
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +52,11 @@ public class networkAccessing extends AppCompatActivity {
                 EditText password = (EditText) findViewById(R.id.networkAccessing_password);
                 String strUsername = userName.getText().toString();
                 String strPassword = password.getText().toString();
-                OkHttpClient mHttpClient = new OkHttpClient().newBuilder().build();
+                OkHttpClient mHttpClient = new OkHttpClient.Builder()
+                        .connectTimeout(10, TimeUnit.SECONDS)
+                        .readTimeout(10, TimeUnit.SECONDS)
+                        .writeTimeout(10, TimeUnit.SECONDS)
+                        .build();
                 FormBody formbody = new FormBody.Builder()
                         .add("user_id", strUsername)
                         .add("password", strPassword)
@@ -54,12 +65,26 @@ public class networkAccessing extends AppCompatActivity {
                         .url("https://d-star.xyz/android/login.php")
                         .post(formbody)
                         .build();
-                try {
-                    Response response = mHttpClient.newCall(request).execute();
-                    Toast.makeText(networkAccessing.this, response.body().string(), Toast.LENGTH_SHORT).show();
-                }catch (IOException e){
-                    return;
-                }
+                Toast.makeText(networkAccessing.this, "test", Toast.LENGTH_SHORT).show();
+                mHttpClient.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                    }
+
+                    @Override
+                    public void onResponse(Call call, final Response response) throws IOException {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Toast.makeText(networkAccessing.this, response.body().string(), Toast.LENGTH_SHORT).show();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                    }
+                });
             }
         });
 
@@ -93,6 +118,7 @@ public class networkAccessing extends AppCompatActivity {
             ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(networkAccessing.this, R.layout.support_simple_spinner_dropdown_item, response.data.getresult());
             ListView listview = (ListView) findViewById(R.id.networkAccessing_listView);
             listview.setAdapter(mAdapter);
+
         }
     }
 }
