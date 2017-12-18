@@ -12,9 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".experiment_1" />
         <activity android:name=".experiment_2" />
         <activity android:name=".experiment_2_2" />
@@ -38,7 +36,7 @@
         <activity android:name=".experiment_7_1" />
         <activity android:name=".experiment_8_1" />
         <activity android:name=".experiment_10" />
-        <activity android:name=".experiment_6"></activity>
+        <activity android:name=".experiment_6" />
 
         <service
             android:name=".updateService"
@@ -50,8 +48,12 @@
             android:exported="true" />
 
         <activity android:name=".networkAccessing">
+
+        </activity>
+        <activity android:name=".experiment_11">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

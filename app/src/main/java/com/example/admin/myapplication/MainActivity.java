@@ -177,5 +177,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(WeChatSimulation);
             }
         });
+        Button network = (Button) findViewById(R.id.network);
+        network.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent network = new Intent(MainActivity.this, com.example.admin.myapplication.networkAccessing.class);
+                startActivity(network);
+            }
+
+        });
     }
 }

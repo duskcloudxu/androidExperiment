@@ -133,9 +133,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="weChat_simulate" />
-
+            <Button
+                android:id="@+id/network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="network" />
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

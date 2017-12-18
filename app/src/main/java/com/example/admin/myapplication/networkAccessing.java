@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.BinderThread;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -40,9 +42,16 @@ public class networkAccessing extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network_accessing);
-        downloadAsynctask downloadAsynctask = new downloadAsynctask();
-        downloadAsynctask.execute("http://wthrcdn.etouch.cn/weather_mini?city=杭州");
         Button login = (Button) findViewById(R.id.networkAccessing_login);
+        Button search=(Button)findViewById(R.id.networkAccessing_search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadAsynctask downloadAsynctask = new downloadAsynctask();
+                String cityName=((EditText)findViewById(R.id.networkAccessing_cityName)).getText().toString();
+                downloadAsynctask.execute("http://wthrcdn.etouch.cn/weather_mini?city="+cityName);
+            }
+        });
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -52,45 +61,16 @@ public class networkAccessing extends AppCompatActivity {
                 EditText password = (EditText) findViewById(R.id.networkAccessing_password);
                 String strUsername = userName.getText().toString();
                 String strPassword = password.getText().toString();
-                OkHttpClient mHttpClient = new OkHttpClient.Builder()
-                        .connectTimeout(10, TimeUnit.SECONDS)
-                        .readTimeout(10, TimeUnit.SECONDS)
-                        .writeTimeout(10, TimeUnit.SECONDS)
-                        .build();
-                FormBody formbody = new FormBody.Builder()
-                        .add("user_id", strUsername)
-                        .add("password", strPassword)
-                        .build();
-                Request request = new Request.Builder()
-                        .url("https://d-star.xyz/android/login.php")
-                        .post(formbody)
-                        .build();
-                Toast.makeText(networkAccessing.this, "test", Toast.LENGTH_SHORT).show();
-                mHttpClient.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                    }
+                loginAsynctask loginAsynctask=new loginAsynctask();
+                String[] strings={strUsername,strPassword};
+                loginAsynctask.execute(strings);
 
-                    @Override
-                    public void onResponse(Call call, final Response response) throws IOException {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    Toast.makeText(networkAccessing.this, response.body().string(), Toast.LENGTH_SHORT).show();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        });
-                    }
-                });
             }
         });
 
 
-    }
 
+    }
     private class downloadAsynctask extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... params) {
@@ -119,6 +99,37 @@ public class networkAccessing extends AppCompatActivity {
             ListView listview = (ListView) findViewById(R.id.networkAccessing_listView);
             listview.setAdapter(mAdapter);
 
+        }
+    }
+    private class loginAsynctask extends AsyncTask<String,Integer,String>{//惊世大坑：http3不能放在ui主线程里，click事件也算ui主进程。
+        @Override
+        protected String doInBackground(String... params) {
+            OkHttpClient mHttpClient = new OkHttpClient.Builder()
+                    .connectTimeout(10, TimeUnit.SECONDS)
+                    .readTimeout(10, TimeUnit.SECONDS)
+                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .build();
+            FormBody formbody = new FormBody.Builder()
+                    .add("user_id", params[0])
+                    .add("password", params[1])
+                    .build();
+            Request request = new Request.Builder()
+                    .url("https://d-star.xyz/android/login.php")
+                    .post(formbody)
+                    .build();
+            String result;
+            try {
+                Response response = mHttpClient.newCall(request).execute();
+                result = response.body().string();
+            } catch (IOException e) {
+                return "download failed for:" + e.getMessage();
+            }
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            Toast.makeText(networkAccessing.this, s, Toast.LENGTH_SHORT).show();
         }
     }
 }
