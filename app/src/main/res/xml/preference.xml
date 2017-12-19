@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="系统设置">
+
+        <CheckBoxPreference
+            android:icon="@mipmap/ic_launcher"
+            android:key="isFlying"
+            android:title="飞行模式" />
+        <CheckBoxPreference
+            android:key="noMute "
+            android:title="不静音" />
+        <ListPreference
+            android:dialogTitle="请选择你的代理商"
+            android:entries="@array/list_entries"
+            android:entryValues="@array/list_entries"
+            android:key="list_preference"
+            android:summary="来成为我们的新用户吧！"
+            android:title="代理商" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="语言设置">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="openChineseInput"
+            android:title="打开中文输入法" />
+        <ListPreference
+            android:dialogTitle="请选择你的语言"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_entries"
+            android:key="language_preference"
+            android:summary="选择语言"
+            android:title="语言" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
