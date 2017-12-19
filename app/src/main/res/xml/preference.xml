@@ -7,13 +7,13 @@
             android:key="isFlying"
             android:title="飞行模式" />
         <CheckBoxPreference
-            android:key="noMute "
+            android:key="noMute"
             android:title="不静音" />
         <ListPreference
             android:dialogTitle="请选择你的代理商"
             android:entries="@array/list_entries"
             android:entryValues="@array/list_entries"
-            android:key="list_preference"
+            android:key="netAgent"
             android:summary="来成为我们的新用户吧！"
             android:title="代理商" />
 
@@ -28,7 +28,7 @@
             android:dialogTitle="请选择你的语言"
             android:entries="@array/language_entries"
             android:entryValues="@array/language_entries"
-            android:key="language_preference"
+            android:key="language"
             android:summary="选择语言"
             android:title="语言" />
     </PreferenceCategory>

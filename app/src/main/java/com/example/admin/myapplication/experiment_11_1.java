@@ -2,6 +2,7 @@ package com.example.admin.myapplication;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.preference.CheckBoxPreference;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,5 +19,7 @@ public class experiment_11_1 extends AppCompatActivity {
         PreferenceFragment prefFragment = new preferenceFrag();
         transaction.add(R.id.E11_1_container, prefFragment);
         transaction.commit();
+
+
     }
 }
