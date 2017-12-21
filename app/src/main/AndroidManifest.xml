@@ -50,13 +50,15 @@
         <activity android:name=".networkAccessing" />
         <activity android:name=".experiment_11"></activity>
         <activity android:name=".experiment_11_1">
+
+        </activity>
+        <activity android:name=".experiment_11_3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".experiment_11_3"></activity>
     </application>
 
 </manifest>
