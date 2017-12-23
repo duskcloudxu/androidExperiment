@@ -12,7 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".experiment_1" />
         <activity android:name=".experiment_2" />
         <activity android:name=".experiment_2_2" />
@@ -48,16 +54,21 @@
             android:exported="true" />
 
         <activity android:name=".networkAccessing" />
-        <activity android:name=".experiment_11"></activity>
-        <activity android:name=".experiment_11_1">
+        <activity android:name=".experiment_11" />
+        <activity android:name=".experiment_11_1" />
+        <activity android:name=".experiment_11_3" />
+        <activity android:name=".experiment_12">
 
         </activity>
-        <activity android:name=".experiment_11_3">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.example.admin.myapplication.myCntProv"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".experiment_12_1">
+
         </activity>
     </application>
 

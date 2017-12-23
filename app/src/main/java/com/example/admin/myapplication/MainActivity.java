@@ -186,5 +186,50 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Button experi_11 = (Button) findViewById(R.id.experi_11);
+        experi_11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_11 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_11.class);
+                startActivity(experiment_11);
+            }
+
+        });
+        Button experi_11_1 = (Button) findViewById(R.id.experi_11_1);
+        experi_11_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_11_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_11_1.class);
+                startActivity(experiment_11_1);
+            }
+
+        });
+        Button experi_11_3 = (Button) findViewById(R.id.experi_11_3);
+        experi_11_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_11_3 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_11_3.class);
+                startActivity(experiment_11_3);
+            }
+
+        });
+        Button experi_12 = (Button) findViewById(R.id.experi_12);
+        experi_12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_12 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_12.class);
+                startActivity(experiment_12);
+            }
+
+        });
+        Button experi_12_1 = (Button) findViewById(R.id.experi_12_1);
+        experi_12_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent experiment_12_1 = new Intent(MainActivity.this, com.example.admin.myapplication.experiment_12_1.class);
+                startActivity(experiment_12_1);
+            }
+
+        });
     }
 }

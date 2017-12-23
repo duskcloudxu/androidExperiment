@@ -78,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="experiment_5" />
+
             <Button
                 android:id="@+id/experi_6"
                 android:layout_width="wrap_content"
@@ -133,12 +134,48 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="weChat_simulate" />
+
             <Button
                 android:id="@+id/network"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="network" />
+
+            <Button
+                android:id="@+id/experi_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_11" />
+
+            <Button
+                android:id="@+id/experi_11_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_11_1" />
+
+            <Button
+                android:id="@+id/experi_11_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_11_3" />
+
+            <Button
+                android:id="@+id/experi_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_12" />
+
+            <Button
+                android:id="@+id/experi_12_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="experiment_12_1" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

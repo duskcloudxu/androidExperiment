@@ -111,6 +111,7 @@ public class experiment_11_3 extends AppCompatActivity {
             try {
                 JSONObject temp = new JSONObject(builder.toString());
                 data = new JSONArray(temp.getString("data"));
+                userNameList.clear();
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject current = data.getJSONObject(i);
                     userNameList.add(current.getString("name"));
