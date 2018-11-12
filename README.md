@@ -4,21 +4,21 @@ Also included some demos of BMI calculator, database query and insert, the weath
 
 ## preview
 
-![BMI calculator](F:\project\androidExperiment\androidExperiment\assets\BMI calculator.png)
+![BMI calculator](.\assets\BMI calculator.png)
 
 <center>BMI calculator</center>
 
-![setting view](F:\project\androidExperiment\androidExperiment\assets\setting view.png)
+![setting view](.\assets\setting view.png)
 
 <center> Setting view</center>
 
 
 
-![weather forecast](F:\project\androidExperiment\androidExperiment\assets\weather forecast.png)
+![weather forecast](.\assets\weather forecast.png)
 
 <center>Weather forecast</center>
 
-![wechat simulator](F:\project\androidExperiment\androidExperiment\assets\wechat simulator.png)
+![wechat simulator](.\assets\wechat simulator.png)
 
 <center>Chatting simulator</center>
 
