@@ -4,21 +4,21 @@ Also included some demos of BMI calculator, database query and insert, the weath
 
 ## preview
 
-![BMI calculator](assets/BMI calculator.png)
+![BMI calculator](assets/BMICalculator.png)
 
 <center>BMI calculator</center>
 
-![setting view](assets/setting view.png)
+![setting view](assets/settingView.png)
 
 <center> Setting view</center>
 
 
 
-![weather forecast](assets/weather forecast.png)
+![weather forecast](assets/weatherForecast.png)
 
 <center>Weather forecast</center>
 
-![wechat simulator](assets/wechat simulator.png)
+![wechat simulator](assets/wechatSimulator.png)
 
 <center>Chatting simulator</center>
 
